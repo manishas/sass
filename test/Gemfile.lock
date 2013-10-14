@@ -1,10 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    builder (3.2.2)
+    ci_reporter (1.9.0)
+      builder (>= 2.1.2)
     rake (0.9.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  ci_reporter
   rake
