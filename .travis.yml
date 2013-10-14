@@ -2,6 +2,6 @@ language: ruby
 env:
   - CI_REPORTS=shippable/testresults
 rvm:
-  - 1.9.3
+  - 1.9.2
 gemfile: test/Gemfile
 script: rake ci:setup:minitest test
