@@ -1,3 +1,5 @@
+require 'ci/reporter/rake/minitest'
+
 # ----- Utility Functions -----
 
 def scope(path)
