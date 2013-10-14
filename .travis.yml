@@ -1,4 +1,6 @@
 language: ruby
+env:
+  - CI_REPORTS: shippable/testresults
 rvm:
   - 1.9.2
 gemfile: test/Gemfile
