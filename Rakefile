@@ -1,3 +1,4 @@
+require 'minitest/autorun'
 require 'ci/reporter/rake/minitest'
 
 # ----- Utility Functions -----
