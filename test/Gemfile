@@ -2,3 +2,5 @@ source :gemcutter
 
 gem 'rake'
 gem 'ci_reporter'
+gem 'simplecov'
+gem 'simplecov-csv'

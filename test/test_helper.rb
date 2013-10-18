@@ -2,9 +2,15 @@ lib_dir = File.dirname(__FILE__) + '/../lib'
 
 require 'test/unit'
 require 'fileutils'
+require 'simplecov'
+require 'simplecov-csv'
 $:.unshift lib_dir unless $:.include?(lib_dir)
 require 'sass'
 require 'mathn' if ENV['MATHN'] == 'true'
+
+SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
+#SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
+SimpleCov.start
 
 Sass::RAILS_LOADED = true unless defined?(Sass::RAILS_LOADED)
 Encoding.default_external = 'UTF-8' if defined?(Encoding)
