@@ -9,7 +9,7 @@ require 'sass'
 require 'mathn' if ENV['MATHN'] == 'true'
 
 SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
-#SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
+SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
 SimpleCov.start
 
 Sass::RAILS_LOADED = true unless defined?(Sass::RAILS_LOADED)
