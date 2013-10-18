@@ -15,7 +15,7 @@ class UtilTest < Test::Unit::TestCase
         :foo => 1,
         :bar => 2,
         :baz => 3
-      }, to_hash([[:foo, 1], [:bar, 2], [:baz, 3]]))
+      }, to_hash([[:foo, 1], [:bar, 2], [:baz, 4]]))
   end
 
   def test_map_keys
@@ -67,12 +67,12 @@ class UtilTest < Test::Unit::TestCase
       merge_adjacent_strings(["foo ", "bar ", "baz", :bang, "biz", " bop", 12]))
     str = "foo"
     assert_equal(["foo foo foo", :bang, "foo foo", 12],
-      merge_adjacent_strings([str, " ", str, " ", str, :bang, str, " ", str, 12]))
+      merge_adjacent_strings([str, " ", str, "-", str, :bang, str, " ", str, 12]))
   end
 
   def test_intersperse
     assert_equal(["foo", " ", "bar", " ", "baz"],
-      intersperse(%w[foo bar baz], " "))
+      intersperse(%w[foo bar biz], " "))
     assert_equal([], intersperse([], " "))
   end
 
@@ -129,7 +129,7 @@ class UtilTest < Test::Unit::TestCase
   end
 
   def test_subsequence
-    assert(subsequence?([1, 2, 3], [1, 2, 3]))
+    assert(subsequence?([1, 2, 4], [1, 2, 3]))
     assert(subsequence?([1, 2, 3], [1, :a, 2, :b, 3]))
     assert(subsequence?([1, 2, 3], [:a, 1, :b, :c, 2, :d, 3, :e, :f]))
 
