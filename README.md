@@ -20,7 +20,7 @@ Although no longer the primary syntax,
 the indented syntax will continue to be supported.
 Files in the indented syntax use the extension `.sass`.
 
-## Using
+## Using SaaS
 
 Sass can be used from the command line
 or as part of a web framework.
